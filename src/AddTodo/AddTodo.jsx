@@ -27,9 +27,9 @@ function AddTodo() {
 		dispatch(addTodo(todo));
 		setAddTodoAlert(false);
 
-		setInterval(() => {
-			setAddTodoAlert(true);
-		}, 2500);
+		// setInterval(() => {
+		// 	setAddTodoAlert(true);
+		// }, 2500);
 	};
 
 	return (
