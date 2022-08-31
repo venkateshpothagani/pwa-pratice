@@ -1,5 +1,5 @@
 var CACHE_NAME = 'pwa-task-manager';
-var urlsToCache = ['/', '/list'];
+var urlsToCache = ['/', '/styles/styles.css', '/script/webpack-bundle.js'];
 
 // Install a service worker
 self.addEventListener('install', (event) => {
@@ -17,14 +17,11 @@ self.addEventListener('install', (event) => {
 
 // Cache and return requests
 self.addEventListener('fetch', (event) => {
-	console.log('[FETCH] - event.request', event.request);
-	console.log('[FETCH] - caches', caches);
-	console.log('[FETCH] - caches.keys()', caches.keys());
+	console.log('[ FETCH ] - ', event.request.url);
 
 	event.respondWith(
 		caches.match(event.request).then(function (response) {
 			// Cache hit - return response
-			console.log('[ CACHE-HIT ] ', response);
 			if (response) {
 				return response;
 			}
