@@ -1,5 +1,5 @@
 var CACHE_NAME = 'pwa-task-manager';
-var urlsToCache = ['/', '/styles/styles.css', '/script/webpack-bundle.js'];
+var urlsToCache = ['/', '/static/js/bundle.js', '/manifest.json', '/logo192.png'];
 
 // Install a service worker
 self.addEventListener('install', (event) => {
