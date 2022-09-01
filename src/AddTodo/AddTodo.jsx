@@ -40,7 +40,7 @@ function AddTodo() {
 			<Form onSubmit={submitTodo}>
 				<Form.Group className="mb-3" controlId="title">
 					<Form.Label>Enter title</Form.Label>
-					<Form.Control type="text" name="title" placeholder="Enter title" onChange={onInputChange} />
+					<Form.Control type="text" name="title" placeholder="Enter title" onChange={onInputChange} required/>
 				</Form.Group>
 
 				<Form.Group className="mb-3" controlId="description">
@@ -50,6 +50,7 @@ function AddTodo() {
 						name="description"
 						placeholder="Enter description"
 						onChange={onInputChange}
+						required
 					/>
 				</Form.Group>
 				<div className="d-grid gap-2">
